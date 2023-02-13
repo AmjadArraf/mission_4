@@ -1,0 +1,26 @@
+use admin
+
+use BankAccounts
+
+db.createCollection(accountoperations)
+
+db.accountoperations.insertMany([{
+    id: '1',
+    accountNumber: '123',
+    type: 'withdrawal',
+    info: {amount: '20'},
+    date: '21-1-2023'
+},
+ {  id: '2',
+    accountNumber: '234',
+    type: 'deposit',
+    info: {amount: '30'},
+    date: '22-1-2023'
+},
+{  id: '3',
+    accountNumber: '345',
+    type: 'loan',
+    info: {amount: '40', interest: '1%', paymentNumber: '3'},
+    date: '22-1-2023'
+}
+])
